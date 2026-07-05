@@ -71,7 +71,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "HDI · Health Data Insights — Ecossistema Integrado de Inteligência em Saúde" },
+      { title: "HDI · By IST — Ecossistema Integrado de Inteligência em Saúde" },
       { name: "description", content: "Plataforma corporativa da Info Service Technology (IST) que integra dados hospitalares, laboratoriais, epidemiológicos e socioeconômicos com IA e modelos preditivos para gestão pública e redes hospitalares." },
       { name: "author", content: "Info Service Technology" },
       { property: "og:title", content: "HDI · Health Data Insights" },

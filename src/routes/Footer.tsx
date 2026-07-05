@@ -47,7 +47,7 @@ export function Footer() {
               <li className="flex gap-2.5"><MapPin className="h-4 w-4 shrink-0 mt-0.5 text-accent-cyan" /><span>Sede corporativa<br />Brasil</span></li>
               <li className="flex gap-2.5"><Mail className="h-4 w-4 shrink-0 mt-0.5 text-accent-cyan" /><a href="mailto:contato@infoservicetechnology.com.br" className="hover:text-primary-foreground">contato@infoservicetechnology.com.br</a></li>
               <li className="flex gap-2.5"><Phone className="h-4 w-4 shrink-0 mt-0.5 text-accent-cyan" /><span>Relações Institucionais</span></li>
-              <li className="flex gap-2.5"><Linkedin className="h-4 w-4 shrink-0 mt-0.5 text-accent-cyan" /><a href="https://www.infoservicetechnology.com.br/" target="_blank" rel="noopener" className="hover:text-primary-foreground">infoservicetechnology.com.br</a></li>
+              <li className="flex gap-2.5"><Linkedin className="h-4 w-4 shrink-0 mt-0.5 text-accent-cyan" /><a href="#" target="_blank" rel="noopener" className="hover:text-primary-foreground">contato@infoservicetechnology.com.br</a></li>
             </ul>
           </div>
         </div>
