@@ -34,10 +34,10 @@ export function Footer() {
           <div>
             <h4 className="text-xs font-semibold uppercase tracking-wider text-accent-cyan">Governança</h4>
             <ul className="mt-4 space-y-2.5 text-sm">
-              <li><a href="#" className="text-primary-foreground/80 hover:text-primary-foreground">Política de Privacidade</a></li>
-              <li><a href="#" className="text-primary-foreground/80 hover:text-primary-foreground">Termos de Uso</a></li>
-              <li><a href="#" className="text-primary-foreground/80 hover:text-primary-foreground">Política de Segurança</a></li>
-              <li><a href="#" className="text-primary-foreground/80 hover:text-primary-foreground">Encarregado (DPO)</a></li>
+              <li><a href="/politica" className="text-primary-foreground/80 hover:text-primary-foreground">Política de Privacidade</a></li>
+              <li><a href="/termo-de-uso" className="text-primary-foreground/80 hover:text-primary-foreground">Termos de Uso</a></li>
+              <li><a href="/politica-de-seguranca" className="text-primary-foreground/80 hover:text-primary-foreground">Política de Segurança</a></li>
+              <li><a href="/dpo" className="text-primary-foreground/80 hover:text-primary-foreground">Encarregado (DPO)</a></li>
             </ul>
           </div>
 

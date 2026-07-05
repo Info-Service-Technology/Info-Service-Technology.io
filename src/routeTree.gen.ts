@@ -9,16 +9,25 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TermoDeUsoRouteImport } from './routes/termo-de-uso'
 import { Route as TecnologiaRouteImport } from './routes/tecnologia'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as PoliticaDeSegurancaRouteImport } from './routes/politica-de-seguranca'
+import { Route as PoliticaRouteImport } from './routes/politica'
 import { Route as GovernancaRouteImport } from './routes/governanca'
 import { Route as EcossistemaRouteImport } from './routes/ecossistema'
+import { Route as DpoRouteImport } from './routes/dpo'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as SolucoesRedesHospitalaresRouteImport } from './routes/solucoes.redes-hospitalares'
 import { Route as SolucoesInteligenciaEpidemiologicaRouteImport } from './routes/solucoes.inteligencia-epidemiologica'
 import { Route as SolucoesGestoresPublicosRouteImport } from './routes/solucoes.gestores-publicos'
 
+const TermoDeUsoRoute = TermoDeUsoRouteImport.update({
+  id: '/termo-de-uso',
+  path: '/termo-de-uso',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TecnologiaRoute = TecnologiaRouteImport.update({
   id: '/tecnologia',
   path: '/tecnologia',
@@ -29,6 +38,16 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PoliticaDeSegurancaRoute = PoliticaDeSegurancaRouteImport.update({
+  id: '/politica-de-seguranca',
+  path: '/politica-de-seguranca',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PoliticaRoute = PoliticaRouteImport.update({
+  id: '/politica',
+  path: '/politica',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const GovernancaRoute = GovernancaRouteImport.update({
   id: '/governanca',
   path: '/governanca',
@@ -37,6 +56,11 @@ const GovernancaRoute = GovernancaRouteImport.update({
 const EcossistemaRoute = EcossistemaRouteImport.update({
   id: '/ecossistema',
   path: '/ecossistema',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DpoRoute = DpoRouteImport.update({
+  id: '/dpo',
+  path: '/dpo',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BlogRoute = BlogRouteImport.update({
@@ -71,10 +95,14 @@ const SolucoesGestoresPublicosRoute =
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/blog': typeof BlogRoute
+  '/dpo': typeof DpoRoute
   '/ecossistema': typeof EcossistemaRoute
   '/governanca': typeof GovernancaRoute
+  '/politica': typeof PoliticaRoute
+  '/politica-de-seguranca': typeof PoliticaDeSegurancaRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tecnologia': typeof TecnologiaRoute
+  '/termo-de-uso': typeof TermoDeUsoRoute
   '/solucoes/gestores-publicos': typeof SolucoesGestoresPublicosRoute
   '/solucoes/inteligencia-epidemiologica': typeof SolucoesInteligenciaEpidemiologicaRoute
   '/solucoes/redes-hospitalares': typeof SolucoesRedesHospitalaresRoute
@@ -82,10 +110,14 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/blog': typeof BlogRoute
+  '/dpo': typeof DpoRoute
   '/ecossistema': typeof EcossistemaRoute
   '/governanca': typeof GovernancaRoute
+  '/politica': typeof PoliticaRoute
+  '/politica-de-seguranca': typeof PoliticaDeSegurancaRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tecnologia': typeof TecnologiaRoute
+  '/termo-de-uso': typeof TermoDeUsoRoute
   '/solucoes/gestores-publicos': typeof SolucoesGestoresPublicosRoute
   '/solucoes/inteligencia-epidemiologica': typeof SolucoesInteligenciaEpidemiologicaRoute
   '/solucoes/redes-hospitalares': typeof SolucoesRedesHospitalaresRoute
@@ -94,10 +126,14 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/blog': typeof BlogRoute
+  '/dpo': typeof DpoRoute
   '/ecossistema': typeof EcossistemaRoute
   '/governanca': typeof GovernancaRoute
+  '/politica': typeof PoliticaRoute
+  '/politica-de-seguranca': typeof PoliticaDeSegurancaRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tecnologia': typeof TecnologiaRoute
+  '/termo-de-uso': typeof TermoDeUsoRoute
   '/solucoes/gestores-publicos': typeof SolucoesGestoresPublicosRoute
   '/solucoes/inteligencia-epidemiologica': typeof SolucoesInteligenciaEpidemiologicaRoute
   '/solucoes/redes-hospitalares': typeof SolucoesRedesHospitalaresRoute
@@ -107,10 +143,14 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/blog'
+    | '/dpo'
     | '/ecossistema'
     | '/governanca'
+    | '/politica'
+    | '/politica-de-seguranca'
     | '/sitemap.xml'
     | '/tecnologia'
+    | '/termo-de-uso'
     | '/solucoes/gestores-publicos'
     | '/solucoes/inteligencia-epidemiologica'
     | '/solucoes/redes-hospitalares'
@@ -118,10 +158,14 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/blog'
+    | '/dpo'
     | '/ecossistema'
     | '/governanca'
+    | '/politica'
+    | '/politica-de-seguranca'
     | '/sitemap.xml'
     | '/tecnologia'
+    | '/termo-de-uso'
     | '/solucoes/gestores-publicos'
     | '/solucoes/inteligencia-epidemiologica'
     | '/solucoes/redes-hospitalares'
@@ -129,10 +173,14 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/blog'
+    | '/dpo'
     | '/ecossistema'
     | '/governanca'
+    | '/politica'
+    | '/politica-de-seguranca'
     | '/sitemap.xml'
     | '/tecnologia'
+    | '/termo-de-uso'
     | '/solucoes/gestores-publicos'
     | '/solucoes/inteligencia-epidemiologica'
     | '/solucoes/redes-hospitalares'
@@ -141,10 +189,14 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   BlogRoute: typeof BlogRoute
+  DpoRoute: typeof DpoRoute
   EcossistemaRoute: typeof EcossistemaRoute
   GovernancaRoute: typeof GovernancaRoute
+  PoliticaRoute: typeof PoliticaRoute
+  PoliticaDeSegurancaRoute: typeof PoliticaDeSegurancaRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TecnologiaRoute: typeof TecnologiaRoute
+  TermoDeUsoRoute: typeof TermoDeUsoRoute
   SolucoesGestoresPublicosRoute: typeof SolucoesGestoresPublicosRoute
   SolucoesInteligenciaEpidemiologicaRoute: typeof SolucoesInteligenciaEpidemiologicaRoute
   SolucoesRedesHospitalaresRoute: typeof SolucoesRedesHospitalaresRoute
@@ -152,6 +204,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/termo-de-uso': {
+      id: '/termo-de-uso'
+      path: '/termo-de-uso'
+      fullPath: '/termo-de-uso'
+      preLoaderRoute: typeof TermoDeUsoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/tecnologia': {
       id: '/tecnologia'
       path: '/tecnologia'
@@ -166,6 +225,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/politica-de-seguranca': {
+      id: '/politica-de-seguranca'
+      path: '/politica-de-seguranca'
+      fullPath: '/politica-de-seguranca'
+      preLoaderRoute: typeof PoliticaDeSegurancaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/politica': {
+      id: '/politica'
+      path: '/politica'
+      fullPath: '/politica'
+      preLoaderRoute: typeof PoliticaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/governanca': {
       id: '/governanca'
       path: '/governanca'
@@ -178,6 +251,13 @@ declare module '@tanstack/react-router' {
       path: '/ecossistema'
       fullPath: '/ecossistema'
       preLoaderRoute: typeof EcossistemaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dpo': {
+      id: '/dpo'
+      path: '/dpo'
+      fullPath: '/dpo'
+      preLoaderRoute: typeof DpoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blog': {
@@ -221,10 +301,14 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BlogRoute: BlogRoute,
+  DpoRoute: DpoRoute,
   EcossistemaRoute: EcossistemaRoute,
   GovernancaRoute: GovernancaRoute,
+  PoliticaRoute: PoliticaRoute,
+  PoliticaDeSegurancaRoute: PoliticaDeSegurancaRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TecnologiaRoute: TecnologiaRoute,
+  TermoDeUsoRoute: TermoDeUsoRoute,
   SolucoesGestoresPublicosRoute: SolucoesGestoresPublicosRoute,
   SolucoesInteligenciaEpidemiologicaRoute:
     SolucoesInteligenciaEpidemiologicaRoute,
