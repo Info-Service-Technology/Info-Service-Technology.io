@@ -17,11 +17,14 @@ import { Route as PoliticaRouteImport } from './routes/politica'
 import { Route as GovernancaRouteImport } from './routes/governanca'
 import { Route as EcossistemaRouteImport } from './routes/ecossistema'
 import { Route as DpoRouteImport } from './routes/dpo'
-import { Route as BlogRouteImport } from './routes/blog'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as SolucoesRedesHospitalaresRouteImport } from './routes/solucoes.redes-hospitalares'
 import { Route as SolucoesInteligenciaEpidemiologicaRouteImport } from './routes/solucoes.inteligencia-epidemiologica'
 import { Route as SolucoesGestoresPublicosRouteImport } from './routes/solucoes.gestores-publicos'
+import { Route as BlogPredicaoDeDoencasRouteImport } from './routes/blog.predicao-de-doencas'
+import { Route as BlogParceriasEstrategicasRouteImport } from './routes/blog.parcerias-estrategicas'
+import { Route as BlogModelosPreditivosRouteImport } from './routes/blog.modelos-preditivos'
 
 const TermoDeUsoRoute = TermoDeUsoRouteImport.update({
   id: '/termo-de-uso',
@@ -63,14 +66,14 @@ const DpoRoute = DpoRouteImport.update({
   path: '/dpo',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BlogRoute = BlogRouteImport.update({
-  id: '/blog',
-  path: '/blog',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SolucoesRedesHospitalaresRoute =
@@ -91,10 +94,25 @@ const SolucoesGestoresPublicosRoute =
     path: '/solucoes/gestores-publicos',
     getParentRoute: () => rootRouteImport,
   } as any)
+const BlogPredicaoDeDoencasRoute = BlogPredicaoDeDoencasRouteImport.update({
+  id: '/blog/predicao-de-doencas',
+  path: '/blog/predicao-de-doencas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogParceriasEstrategicasRoute =
+  BlogParceriasEstrategicasRouteImport.update({
+    id: '/blog/parcerias-estrategicas',
+    path: '/blog/parcerias-estrategicas',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogModelosPreditivosRoute = BlogModelosPreditivosRouteImport.update({
+  id: '/blog/modelos-preditivos',
+  path: '/blog/modelos-preditivos',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/blog': typeof BlogRoute
   '/dpo': typeof DpoRoute
   '/ecossistema': typeof EcossistemaRoute
   '/governanca': typeof GovernancaRoute
@@ -103,13 +121,16 @@ export interface FileRoutesByFullPath {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tecnologia': typeof TecnologiaRoute
   '/termo-de-uso': typeof TermoDeUsoRoute
+  '/blog/modelos-preditivos': typeof BlogModelosPreditivosRoute
+  '/blog/parcerias-estrategicas': typeof BlogParceriasEstrategicasRoute
+  '/blog/predicao-de-doencas': typeof BlogPredicaoDeDoencasRoute
   '/solucoes/gestores-publicos': typeof SolucoesGestoresPublicosRoute
   '/solucoes/inteligencia-epidemiologica': typeof SolucoesInteligenciaEpidemiologicaRoute
   '/solucoes/redes-hospitalares': typeof SolucoesRedesHospitalaresRoute
+  '/blog/': typeof BlogIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/blog': typeof BlogRoute
   '/dpo': typeof DpoRoute
   '/ecossistema': typeof EcossistemaRoute
   '/governanca': typeof GovernancaRoute
@@ -118,14 +139,17 @@ export interface FileRoutesByTo {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tecnologia': typeof TecnologiaRoute
   '/termo-de-uso': typeof TermoDeUsoRoute
+  '/blog/modelos-preditivos': typeof BlogModelosPreditivosRoute
+  '/blog/parcerias-estrategicas': typeof BlogParceriasEstrategicasRoute
+  '/blog/predicao-de-doencas': typeof BlogPredicaoDeDoencasRoute
   '/solucoes/gestores-publicos': typeof SolucoesGestoresPublicosRoute
   '/solucoes/inteligencia-epidemiologica': typeof SolucoesInteligenciaEpidemiologicaRoute
   '/solucoes/redes-hospitalares': typeof SolucoesRedesHospitalaresRoute
+  '/blog': typeof BlogIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/blog': typeof BlogRoute
   '/dpo': typeof DpoRoute
   '/ecossistema': typeof EcossistemaRoute
   '/governanca': typeof GovernancaRoute
@@ -134,15 +158,18 @@ export interface FileRoutesById {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tecnologia': typeof TecnologiaRoute
   '/termo-de-uso': typeof TermoDeUsoRoute
+  '/blog/modelos-preditivos': typeof BlogModelosPreditivosRoute
+  '/blog/parcerias-estrategicas': typeof BlogParceriasEstrategicasRoute
+  '/blog/predicao-de-doencas': typeof BlogPredicaoDeDoencasRoute
   '/solucoes/gestores-publicos': typeof SolucoesGestoresPublicosRoute
   '/solucoes/inteligencia-epidemiologica': typeof SolucoesInteligenciaEpidemiologicaRoute
   '/solucoes/redes-hospitalares': typeof SolucoesRedesHospitalaresRoute
+  '/blog/': typeof BlogIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/blog'
     | '/dpo'
     | '/ecossistema'
     | '/governanca'
@@ -151,13 +178,16 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/tecnologia'
     | '/termo-de-uso'
+    | '/blog/modelos-preditivos'
+    | '/blog/parcerias-estrategicas'
+    | '/blog/predicao-de-doencas'
     | '/solucoes/gestores-publicos'
     | '/solucoes/inteligencia-epidemiologica'
     | '/solucoes/redes-hospitalares'
+    | '/blog/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/blog'
     | '/dpo'
     | '/ecossistema'
     | '/governanca'
@@ -166,13 +196,16 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/tecnologia'
     | '/termo-de-uso'
+    | '/blog/modelos-preditivos'
+    | '/blog/parcerias-estrategicas'
+    | '/blog/predicao-de-doencas'
     | '/solucoes/gestores-publicos'
     | '/solucoes/inteligencia-epidemiologica'
     | '/solucoes/redes-hospitalares'
+    | '/blog'
   id:
     | '__root__'
     | '/'
-    | '/blog'
     | '/dpo'
     | '/ecossistema'
     | '/governanca'
@@ -181,14 +214,17 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/tecnologia'
     | '/termo-de-uso'
+    | '/blog/modelos-preditivos'
+    | '/blog/parcerias-estrategicas'
+    | '/blog/predicao-de-doencas'
     | '/solucoes/gestores-publicos'
     | '/solucoes/inteligencia-epidemiologica'
     | '/solucoes/redes-hospitalares'
+    | '/blog/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  BlogRoute: typeof BlogRoute
   DpoRoute: typeof DpoRoute
   EcossistemaRoute: typeof EcossistemaRoute
   GovernancaRoute: typeof GovernancaRoute
@@ -197,9 +233,13 @@ export interface RootRouteChildren {
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TecnologiaRoute: typeof TecnologiaRoute
   TermoDeUsoRoute: typeof TermoDeUsoRoute
+  BlogModelosPreditivosRoute: typeof BlogModelosPreditivosRoute
+  BlogParceriasEstrategicasRoute: typeof BlogParceriasEstrategicasRoute
+  BlogPredicaoDeDoencasRoute: typeof BlogPredicaoDeDoencasRoute
   SolucoesGestoresPublicosRoute: typeof SolucoesGestoresPublicosRoute
   SolucoesInteligenciaEpidemiologicaRoute: typeof SolucoesInteligenciaEpidemiologicaRoute
   SolucoesRedesHospitalaresRoute: typeof SolucoesRedesHospitalaresRoute
+  BlogIndexRoute: typeof BlogIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -260,18 +300,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DpoRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/blog': {
-      id: '/blog'
-      path: '/blog'
-      fullPath: '/blog'
-      preLoaderRoute: typeof BlogRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/': {
       id: '/'
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/solucoes/redes-hospitalares': {
@@ -295,12 +335,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SolucoesGestoresPublicosRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/predicao-de-doencas': {
+      id: '/blog/predicao-de-doencas'
+      path: '/blog/predicao-de-doencas'
+      fullPath: '/blog/predicao-de-doencas'
+      preLoaderRoute: typeof BlogPredicaoDeDoencasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/parcerias-estrategicas': {
+      id: '/blog/parcerias-estrategicas'
+      path: '/blog/parcerias-estrategicas'
+      fullPath: '/blog/parcerias-estrategicas'
+      preLoaderRoute: typeof BlogParceriasEstrategicasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/modelos-preditivos': {
+      id: '/blog/modelos-preditivos'
+      path: '/blog/modelos-preditivos'
+      fullPath: '/blog/modelos-preditivos'
+      preLoaderRoute: typeof BlogModelosPreditivosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  BlogRoute: BlogRoute,
   DpoRoute: DpoRoute,
   EcossistemaRoute: EcossistemaRoute,
   GovernancaRoute: GovernancaRoute,
@@ -309,10 +369,14 @@ const rootRouteChildren: RootRouteChildren = {
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TecnologiaRoute: TecnologiaRoute,
   TermoDeUsoRoute: TermoDeUsoRoute,
+  BlogModelosPreditivosRoute: BlogModelosPreditivosRoute,
+  BlogParceriasEstrategicasRoute: BlogParceriasEstrategicasRoute,
+  BlogPredicaoDeDoencasRoute: BlogPredicaoDeDoencasRoute,
   SolucoesGestoresPublicosRoute: SolucoesGestoresPublicosRoute,
   SolucoesInteligenciaEpidemiologicaRoute:
     SolucoesInteligenciaEpidemiologicaRoute,
   SolucoesRedesHospitalaresRoute: SolucoesRedesHospitalaresRoute,
+  BlogIndexRoute: BlogIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -35,12 +35,12 @@ export const Route = createFileRoute("/dpo")({
                   Em cumprimento ao Art. 41 da LGPD, a IST possui um Comitê de Segurança e Privacidade que atua como Encarregado de Proteção de Dados (DPO).
                 </p>
                 <p className="text-xs text-muted-foreground mt-4 font-mono">
-                  Contato Institucional: comite.privacidade@ist.data
+                  Contato Institucional: contato@infoservicetechnology.com.br
                 </p>
               </div>
               <div className="flex justify-end">
                 <Button className="w-full md:w-auto gap-2" asChild>
-                  <a href="mailto:comite.privacidade@ist.data">
+                  <a href="mailto:contato@infoservicetechnology.com.br" target="_blank" rel="noopener">
                     <Mail className="h-4 w-4" /> Enviar E-mail
                   </a>
                 </Button>

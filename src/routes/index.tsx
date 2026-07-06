@@ -363,7 +363,7 @@ function CTA() {
               </p>
             </div>
             <div className="flex flex-col gap-3">
-              <a href="mailto:contato@infoservicetechnology.com.br" className="inline-flex items-center justify-center gap-2 rounded-md bg-accent-cyan px-6 py-3.5 text-sm font-semibold text-primary hover:bg-accent-cyan/90 transition-colors">
+              <a href="/apresentacao-hdi.pdf" target="_blank" className="inline-flex items-center justify-center gap-2 rounded-md bg-accent-cyan px-6 py-3.5 text-sm font-semibold text-primary hover:bg-accent-cyan/90 transition-colors">
                 Solicitar apresentação executiva <ArrowRight className="h-4 w-4" />
               </a>
               <Link to="/blog" className="inline-flex items-center justify-center gap-2 rounded-md border border-white/25 px-6 py-3.5 text-sm font-semibold text-primary-foreground hover:bg-white/10 transition-colors">

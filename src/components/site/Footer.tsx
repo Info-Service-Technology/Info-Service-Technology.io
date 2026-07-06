@@ -1,7 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { Shield, MapPin, Mail, Phone, Linkedin } from "lucide-react";
 import istLogo from "@/assets/ist-logo.png";
-
+import istLogoPrincipal from "@/assets/ist-logo-principal.png";
+import { FaWhatsapp } from "react-icons/fa";
 export function Footer() {
   return (
     <footer className="mt-24 border-t border-border bg-primary text-primary-foreground">
@@ -9,7 +10,7 @@ export function Footer() {
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
             <div className="rounded-lg bg-white/95 p-3 inline-block">
-              <img src={istLogo} alt="Info Service Technology" className="h-10 w-auto" />
+              <img src={istLogoPrincipal} alt="Info Service Technology" className="h-10 w-auto" />
             </div>
             <p className="mt-5 text-sm leading-relaxed text-primary-foreground/75 max-w-sm">
               HDI — Health Data Insights é um produto da{" "}
@@ -17,7 +18,7 @@ export function Footer() {
             </p>
             <div className="mt-6 flex items-center gap-2 text-xs text-primary-foreground/70">
               <Shield className="h-4 w-4 text-accent-emerald" />
-              Conformidade LGPD · ISO 27001-ready · HIPAA aligned
+              Conformidade LGPD · ISO 27001-ready · HIPAA
             </div>
           </div>
 
@@ -46,14 +47,24 @@ export function Footer() {
             <ul className="mt-4 space-y-3 text-sm text-primary-foreground/85">
               <li className="flex gap-2.5"><MapPin className="h-4 w-4 shrink-0 mt-0.5 text-accent-cyan" /><span>Sede corporativa<br />Brasil</span></li>
               <li className="flex gap-2.5"><Mail className="h-4 w-4 shrink-0 mt-0.5 text-accent-cyan" /><a href="mailto:contato@infoservicetechnology.com.br" className="hover:text-primary-foreground">contato@infoservicetechnology.com.br</a></li>
-              <li className="flex gap-2.5"><Phone className="h-4 w-4 shrink-0 mt-0.5 text-accent-cyan" /><span>Relações Institucionais</span></li>
+              <li className="flex gap-2.5">
+                <FaWhatsapp className="h-4 w-4 shrink-0 mt-0.5 text-accent-cyan" />
+                <a
+                  href="https://api.whatsapp.com/send?phone=5524992056576&text=Olá!%20Vim%20através%20do%20site%20da%20IST%20(Info%20Service%20Technology)%20e%20gostaria%20de%20obter%20mais%20informações."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-secondary transition-colors"
+                >
+                  Relações Institucionais
+                </a>
+              </li>
               <li className="flex gap-2.5"><Linkedin className="h-4 w-4 shrink-0 mt-0.5 text-accent-cyan" /><a href="https://www.infoservicetechnology.com.br/" target="_blank" rel="noopener" className="hover:text-primary-foreground">infoservicetechnology.com.br</a></li>
             </ul>
           </div>
         </div>
 
         <div className="mt-14 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-t border-white/10 pt-6 text-xs text-primary-foreground/60">
-          <p>© {new Date().getFullYear()} Info Service Technology. Todos os direitos reservados. HDI® é marca registrada.</p>
+          <p>© {new Date().getFullYear()} Info Service Technology. | Todos os direitos reservados. HDI® é marca registrada. | </p>
           <p>CNPJ · Registro ANPD · Certificações de segurança da informação</p>
         </div>
       </div>

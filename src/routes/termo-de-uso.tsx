@@ -103,7 +103,7 @@ export const Route = createFileRoute("/termo-de-uso")({
                 Nossa equipe técnica e o setor de governança corporativa estão disponíveis para fornecer suporte sobre os termos contratuais e arquitetura de software.
               </p>
               <Button className="mt-2 group gap-2">
-                Falar com Engenharia de Dados <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+               <a href="mailto:contato@infoservicetechnology.com.br">Falar com Engenharia de Dados</a> <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>
 
