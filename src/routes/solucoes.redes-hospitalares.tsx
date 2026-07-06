@@ -15,16 +15,16 @@ export const Route = createFileRoute("/solucoes/redes-hospitalares")({
       <PageHero
         eyebrow="Saúde Privada & Redes Hospitalares"
         title="Da porta de entrada ao contrato de valor — inteligência integrada."
-        description="Modelos preditivos, analytics de desfechos e interoperabilidade nativa para redes hospitalares, operadoras e grupos assistenciais de grande porte."
+        description="Modelos analíticos, inteligência analítica e interoperabilidade para hospitais, redes hospitalares, secretarias de saúde e organizações que utilizam dados para aprimorar a gestão e a qualidade assistencial."
       />
       <SolutionGrid
         items={[
-          { i: BedDouble, t: "Gestão preditiva de leitos", d: "Previsão de ocupação, altas e transferências para otimizar capacidade." },
-          { i: Activity, t: "Desfechos clínicos", d: "Analytics longitudinal por linha de cuidado, especialidade e protocolo." },
-          { i: Stethoscope, t: "Jornada do paciente", d: "Rastreamento omnichannel do encontro ao pós-alta." },
-          { i: DollarSign, t: "Contratos de valor", d: "Bundles, capitation e VBHC com inteligência de risco populacional." },
-          { i: Workflow, t: "Interoperabilidade FHIR", d: "Integração nativa a HIS, EMR, PACS/RIS e portais de operadoras." },
-          { i: Hospital, t: "Rede assistencial", d: "Visão consolidada de toda a rede: hospital, ambulatório, home care e telesaúde." },
+          { i: BedDouble, t: "Inteligência para capacidade assistencial", d: "Antecipe a demanda por serviços de saúde e apoie o planejamento da utilização da capacidade assistencial, reduzindo gargalos e aumentando a eficiência operacional." },
+          { i: Activity, t: "Jornada assistencial integrada", d: "Analise o percurso do paciente entre a Atenção Primária, Atenção Especializada, serviços ambulatoriais e hospitais, promovendo maior continuidade do cuidado." },
+          { i: Stethoscope, t: "Desfechos clínicos", d: "Acompanhe indicadores assistenciais e avalie os resultados clínicos por linha de cuidado, especialidade e perfil populacional." },
+          { i: DollarSign, t: "Inteligência para tomada de decisão", d: "Consolide dados de múltiplas fontes em indicadores estratégicos para apoiar gestores hospitalares e de saúde pública na definição de políticas e ações." },
+          { i: Workflow, t: "Interoperabilidade inteligente", d: "Integre dados provenientes de prontuários eletrônicos, laboratórios, operadoras e demais sistemas de saúde por meio dos principais padrões nacionais e internacionais, formando uma visão única e confiável das informações." },
+          { i: Hospital, t: "Visão integrada da rede assistencial", d: "Centralize indicadores de hospitais, ambulatórios, unidades de saúde e demais estabelecimentos assistenciais em uma plataforma única para gestão integrada da rede." },
         ]}
       />
     </PageShell>

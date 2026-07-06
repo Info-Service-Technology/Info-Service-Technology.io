@@ -8,8 +8,8 @@ import { PageShell } from "@/components/site/PageShell";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "HDI · Health Data Insights — Ecossistema Integrado de Inteligência em Saúde" },
-      { name: "description", content: "A plataforma corporativa que integra dados hospitalares, laboratoriais, epidemiológicos e socioeconômicos com IA e modelos preditivos para transformar a gestão de saúde." },
+      { title: "IST - Ecossistema Integrado de Inteligência em TI" },
+      { name: "description", content: "A plataforma corporativa HDI que integra dados hospitalares, laboratoriais, epidemiológicos e socioeconômicos com IA e modelos preditivos para transformar a gestão de saúde." },
     ],
   }),
   component: Home,
@@ -31,107 +31,157 @@ function Home() {
 /* ─────────── HERO ─────────── */
 function Hero() {
   return (
-    <section className="relative overflow-hidden bg-primary text-primary-foreground">
+    <section className="relative overflow-hidden bg-primary text-primary-foreground min-h-[640px] flex items-center perspective-1000">
       <div className="absolute inset-0 grid-bg opacity-[0.09]" />
       <div className="absolute -top-40 -right-40 h-[500px] w-[500px] rounded-full bg-accent-cyan/20 blur-[120px]" />
       <div className="absolute -bottom-40 -left-40 h-[400px] w-[400px] rounded-full bg-accent-emerald/15 blur-[100px]" />
 
-      <div className="relative container-corp pt-16 pb-24 md:pt-24 md:pb-32">
-        <div className="grid gap-14 lg:grid-cols-[1.15fr_0.85fr] items-center">
-          <div>
-            <span className="eyebrow">
+      <div className="relative container-corp py-12 md:py-16">
+        <div className="grid gap-8 lg:grid-cols-2 items-center">
+          
+          {/* Lado Esquerdo */}
+          <div className="flex flex-col justify-center">
+            <span className="eyebrow text-xs tracking-wider">
               <span className="h-1.5 w-1.5 rounded-full bg-accent-emerald animate-pulse" />
               Visão Geral do Território · Plataforma corporativa
             </span>
-            <h1 className="mt-5 text-4xl md:text-6xl font-bold tracking-tight leading-[1.05]">
+            <h1 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.1]">
               Inteligência preditiva para a{" "}
               <span className="bg-gradient-to-r from-accent-cyan to-accent-emerald bg-clip-text text-transparent">
                 gestão da saúde
               </span>{" "}
               em escala nacional.
             </h1>
-            <p className="mt-6 text-lg md:text-xl leading-relaxed text-primary-foreground/80 max-w-2xl">
+            <p className="mt-4 text-sm md:text-base leading-relaxed text-primary-foreground/80 max-w-xl">
               O HDI integra sistemas hospitalares, laboratórios, vigilância epidemiológica, bases governamentais e indicadores socioeconômicos, criando uma <strong className="text-primary-foreground">visão completa do território</strong>. Com IA e modelos preditivos, apoiamos decisões estratégicas de secretarias, governos e redes hospitalares.
             </p>
 
-            <div className="mt-9 flex flex-wrap items-center gap-3">
-              <Link to="/ecossistema" className="inline-flex items-center gap-2 rounded-md bg-accent-cyan px-6 py-3.5 text-sm font-semibold text-primary hover:bg-accent-cyan/90 transition-colors">
-                Explorar o Ecossistema <ArrowRight className="h-4 w-4" />
+            <div className="mt-6 flex flex-wrap items-center gap-3">
+              <Link to="/ecossistema" className="inline-flex items-center gap-2 rounded-md bg-accent-cyan px-5 py-2.5 text-xs font-semibold text-primary hover:bg-accent-cyan/90 transition-colors">
+                Explorar o Ecossistema <ArrowRight className="h-3.5 w-3.5" />
               </Link>
-              <Link to="/solucoes/gestores-publicos" className="inline-flex items-center gap-2 rounded-md border border-white/25 bg-white/5 px-6 py-3.5 text-sm font-semibold text-primary-foreground hover:bg-white/10 transition-colors backdrop-blur">
+              <Link to="/solucoes/gestores-publicos" className="inline-flex items-center gap-2 rounded-md border border-white/25 bg-white/5 px-5 py-2.5 text-xs font-semibold text-primary-foreground hover:bg-white/10 transition-colors backdrop-blur">
                 Falar com Relações Institucionais
               </Link>
             </div>
-
-            <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-xs text-primary-foreground/60">
-              <div className="flex items-center gap-1.5"><ShieldCheck className="h-4 w-4 text-accent-emerald" /> LGPD compliant</div>
-              <div className="flex items-center gap-1.5"><Lock className="h-4 w-4 text-accent-emerald" /> Criptografia AES-256</div>
-              <div className="flex items-center gap-1.5"><FileCheck2 className="h-4 w-4 text-accent-emerald" /> ISO 27001 ready</div>
-              <div className="flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-accent-emerald" /> HIPAA aligned</div>
-            </div>
           </div>
 
-          {/* Console mock */}
-          <div className="relative">
-            <div className="absolute -inset-4 bg-gradient-to-tr from-accent-cyan/30 to-accent-emerald/20 blur-2xl opacity-60" />
-            <div className="relative rounded-2xl border border-white/15 bg-primary-deep/70 backdrop-blur-xl shadow-2xl overflow-hidden">
-              <div className="flex items-center justify-between border-b border-white/10 px-5 py-3">
-                <div className="flex items-center gap-2 text-xs text-primary-foreground/60">
-                  <div className="flex gap-1.5">
-                    <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
-                    <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
-                    <span className="h-2.5 w-2.5 rounded-full bg-accent-emerald/70" />
-                  </div>
-                  hdi · console de território
-                </div>
-                <span className="text-[10px] font-semibold uppercase tracking-widest text-accent-emerald">Live</span>
-              </div>
-              <div className="p-5 space-y-4">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <div className="text-[11px] uppercase tracking-wider text-primary-foreground/50">Risco epidemiológico · macrorregião</div>
-                    <div className="mt-1 text-3xl font-bold">Moderado ↗</div>
-                  </div>
-                  <div className="rounded-lg bg-accent-cyan/15 border border-accent-cyan/30 px-3 py-1.5 text-xs text-accent-cyan font-semibold">
-                    +12,4%
-                  </div>
-                </div>
-
-                {/* fake chart */}
-                <div className="h-32 rounded-lg bg-black/20 border border-white/5 p-3 flex items-end gap-1.5">
-                  {[35,42,38,55,48,62,58,71,65,78,72,84,90,82,88].map((h,i)=>(
-                    <div key={i} className="flex-1 rounded-t bg-gradient-to-t from-accent-cyan/40 to-accent-cyan" style={{height: `${h}%`}} />
-                  ))}
-                </div>
-
-                <div className="grid grid-cols-3 gap-2 pt-1">
-                  {[
-                    {l:"Hospitais", v:"1.284", c:"cyan"},
-                    {l:"Laboratórios", v:"342", c:"emerald"},
-                    {l:"Municípios", v:"1.076", c:"cyan"},
-                  ].map(m=>(
-                    <div key={m.l} className="rounded-lg bg-white/[0.04] border border-white/5 p-3">
-                      <div className="text-[10px] uppercase tracking-wider text-primary-foreground/50">{m.l}</div>
-                      <div className={`mt-1 text-lg font-bold ${m.c==='cyan'?'text-accent-cyan':'text-accent-emerald'}`}>{m.v}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+          {/* Lado Direito - Painel com Efeito de Profundidade e Perspectiva */}
+          <div className="relative hidden lg:block w-full max-w-[560px] justify-self-end [transform:rotateY(-6deg)_rotateX(4deg)] transition-transform duration-500 hover:[transform:rotateY(0deg)_rotateX(0deg)]">
+            {/* Brilho difuso de fundo (Glow) para destacar o painel */}
+            <div className="absolute inset-0 bg-gradient-to-r from-accent-cyan/10 to-accent-emerald/10 rounded-2xl blur-2xl -z-10" />
+            <DashboardMock />
           </div>
+
         </div>
       </div>
     </section>
   );
 }
 
+/* ─────────── DASHBOARD MOCK ─────────── */
+function DashboardMock() {
+  return (
+    <div className="relative w-full">
+      {/* Adicionado shadow customizado pesado e borda sutil branca/10 */}
+      <div className="relative rounded-2xl border border-white/[0.08] bg-white p-4 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.4)] text-slate-900 text-[11px]">
+
+        {/* topo compactado */}
+        <div className="grid gap-3 grid-cols-[1fr_auto] items-start border-b border-slate-100 pb-3">
+          <div>
+            <h3 className="text-sm font-semibold text-slate-900 leading-tight">Análises do Município</h3>
+            <p className="text-[10px] text-slate-400">Gráficos e indicadores do município.</p>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-1.5 rounded-xl border border-slate-100 bg-slate-50 p-1.5 text-[9px] max-w-[320px] justify-end">
+            <span className="text-slate-400">Doença:</span>
+            <span className="rounded bg-white border px-1.5 py-0.5 font-medium">Todas</span>
+            <span className="text-slate-400">Início:</span>
+            <span className="rounded bg-white border px-1.5 py-0.5">06/07/2024</span>
+            <span className="text-slate-400">Fim:</span>
+            <span className="rounded bg-white border px-1.5 py-0.5">06/07/2026</span>
+            <span className="text-slate-400">Granularidade:</span>
+            <span className="rounded bg-white border px-1.5 py-0.5">Semana</span>
+          </div>
+        </div>
+
+        {/* KPIs */}
+        <div className="mt-3 grid gap-2 grid-cols-4">
+          {[
+            ["Casos no período", "61"],
+            ["UFs afetadas", "1"],
+            ["Municípios afetados", "1"],
+            ["Δ janela móvel", "-41.2%"],
+          ].map(([label, value]) => (
+            <div key={label} className="rounded-xl border border-slate-100 bg-slate-50/50 p-2 text-center">
+              <p className="text-[9px] text-slate-400 truncate whitespace-nowrap" title={label}>{label}</p>
+              <strong className="mt-0.5 block text-sm text-slate-950 font-bold">{value}</strong>
+            </div>
+          ))}
+        </div>
+
+        {/* Gráficos */}
+        <div className="mt-3 grid gap-3 grid-cols-2">
+          <div className="rounded-xl border border-slate-100 bg-white p-3 flex flex-col justify-between">
+            <div>
+              <p className="text-[9px] text-slate-400">Comparativos</p>
+              <h4 className="text-[10px] font-semibold text-slate-800">Casos no município</h4>
+            </div>
+
+            <div className="mt-3 h-36 border-l border-b border-slate-200 relative mx-auto w-full max-w-[120px]">
+              <div className="absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:25%_25%]" />
+              <div className="absolute bottom-0 left-[20%] h-[60%] w-[60%] bg-blue-600 rounded-t-sm" />
+              <span className="absolute bottom-[-22px] left-1/2 -translate-x-1/2 text-[8px] text-slate-400 whitespace-nowrap">
+                município analisado
+              </span>
+            </div>
+
+            <p className="mt-6 text-[8px] text-slate-400 leading-tight">
+              Escopo municipal aplicado automaticamente pelo tenant.
+            </p>
+          </div>
+
+          <div className="rounded-xl border border-slate-100 bg-white p-3 flex flex-col justify-between">
+            <div>
+              <p className="text-[9px] text-slate-400">Tendências</p>
+              <h4 className="text-[10px] font-semibold text-slate-800">Casos ao longo do tempo</h4>
+            </div>
+
+            <div className="mt-3 h-36 border-l border-b border-slate-200 relative w-full">
+              <div className="absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:20%_25%]" />
+              <svg viewBox="0 0 500 220" className="absolute inset-0 h-full w-full" preserveAspectRatio="none">
+                <path
+                  d="M0 170 C60 110, 100 90, 160 100 S250 120, 300 80 S390 20, 455 55 S490 120, 500 105"
+                  fill="none"
+                  stroke="#2563eb"
+                  strokeWidth="4"
+                />
+              </svg>
+            </div>
+
+            <p className="mt-2 text-[8px] text-slate-400">
+              Granularidade: <strong>Semana.</strong>
+            </p>
+          </div>
+        </div>
+
+        {/* Rodapé */}
+        <p className="mt-3 pt-2 border-t border-slate-50 text-[8px] text-slate-400 truncate">
+          Filtros ativos: doença=<strong>Todas</strong>, período=<strong>2024-07-06 → 2026-07-06</strong>
+        </p>
+      </div>
+    </div>
+  );
+}
+
+
 /* ─────────── METRICS ─────────── */
 function Metrics() {
   const stats = [
-    { v: "180M+", l: "Registros de saúde integrados", i: Database },
-    { v: "1.5K+", l: "Instituições conectadas", i: Hospital },
-    { v: "99,98%", l: "Disponibilidade da plataforma", i: Activity },
-    { v: "< 4s", l: "Latência média de análise", i: TrendingUp },
+    { v: "Integração", l: "Registros de saúde integrados", i: Database },
+    { v: "Conexão", l: "Instituições conectadas", i: Hospital },
+    { v: "SLA", l: "Disponibilidade da plataforma", i: Activity },
+    { v: "CDN", l: "Latência média de análise", i: TrendingUp },
   ];
   return (
     <section className="border-b border-border bg-surface">
@@ -170,10 +220,10 @@ function Ecosystem() {
         <div className="max-w-3xl">
           <span className="eyebrow">O Ecossistema</span>
           <h2 className="mt-3 text-3xl md:text-5xl font-bold tracking-tight text-foreground">
-            Um único data lake governado, alimentado por todo o território.
+            Data Lake governado, para integração de dados.
           </h2>
           <p className="mt-5 text-lg text-muted-foreground leading-relaxed">
-            O HDI unifica fontes fragmentadas em uma camada semântica soberana. A partir dela, modelos preditivos e IA generativa entregam evidências acionáveis para gestão pública e privada.
+            Data Marts especializados para cada contexto de negócio.
           </p>
         </div>
 
@@ -262,7 +312,7 @@ function Segments() {
         <div className="max-w-3xl">
           <span className="eyebrow">Segmentos de Atendimento</span>
           <h2 className="mt-3 text-3xl md:text-5xl font-bold tracking-tight text-foreground">
-            Uma plataforma. Dois mundos da saúde.
+            Plataforma para simplificar a gestão.
           </h2>
         </div>
 
