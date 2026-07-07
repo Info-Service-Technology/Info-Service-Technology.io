@@ -179,7 +179,7 @@ function DashboardMock() {
 function Metrics() {
   const stats = [
     { v: "Dados", l: "Registros de saúde integrados", i: Database },
-    { v: "Conexão", l: "Instituições conectadas", i: Hospital },
+    { v: "Rede", l: "Instituições conectadas", i: Hospital },
     { v: "SLA", l: "Disponibilidade da plataforma", i: Activity },
     { v: "CDN", l: "Latência média de análise", i: TrendingUp },
   ];
