@@ -8,7 +8,7 @@ import { PageShell } from "@/components/site/PageShell";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "IST - Ecossistema Integrado de Inteligência em TI" },
+      { title: "IST - Ecossistema Integrado de Inteligência." },
       { name: "description", content: "A plataforma corporativa HDI que integra dados hospitalares, laboratoriais, epidemiológicos e socioeconômicos com IA e modelos preditivos para transformar a gestão de saúde." },
     ],
   }),
