@@ -1,0 +1,1 @@
+import {Typography} from '@mui/material';export default function SectionTag({children,color='#d81159'}:{children:React.ReactNode;color?:string}){return <Typography variant="overline" sx={{color,fontWeight:800,letterSpacing:2.2}}>{children}</Typography>}
