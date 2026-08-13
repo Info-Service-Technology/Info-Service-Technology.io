@@ -65,7 +65,7 @@ export default function Navbar() {
             </Button>
           </Stack>
 
-          <Button onClick={e => setLanguageAnchor(e.currentTarget)} startIcon={<LanguageOutlined />} sx={{ display: { xs: 'none', md: 'flex' }, color: '#555', minWidth: 85 }}>
+          <Button onClick={e => setLanguageAnchor(e.currentTarget)} startIcon={<LanguageOutlined />} sx={{ display: { xs: 'none', md: 'flex' }, color: '#555', minWidth: 85, whiteSpace: 'nowrap' }}>
             {languageOptions.find(([value]) => value === language)?.[1]}
           </Button>
 
@@ -76,7 +76,7 @@ export default function Navbar() {
             rel="noopener noreferrer"
             startIcon={<LockOutlined />}
             variant="contained"
-            sx={{ display: { xs: 'none', md: 'flex' }, bgcolor: '#111', color: '#fff', ml: 1 }}
+            sx={{ display: { xs: 'none', md: 'flex' }, bgcolor: '#111', color: '#fff', ml: 1, whiteSpace: 'nowrap' }}
           >
             {t('restricted')}
           </Button>
@@ -158,7 +158,7 @@ export default function Navbar() {
                 rel="noopener noreferrer"
                 startIcon={<LockOutlined />}
                 variant="contained"
-                sx={{ bgcolor: '#111', color: '#fff' }}
+                sx={{ bgcolor: '#111', color: '#fff', whiteSpace: 'nowrap' }}
               >
                 {t('restricted')}
               </Button>
