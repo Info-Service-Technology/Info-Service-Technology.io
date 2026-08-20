@@ -19,6 +19,7 @@ import {modelos,parcerias,predicao} from './pages/blogArticles';
 import InteligenciaEpidemiologica from './pages/InteligenciaEpidemiologica';
 import SaudePrivada from './pages/SaudePrivada';
 import GestaoPublica from './pages/GestaoPublica';
+import NotFound from './pages/NotFound';
 
 function Scroll(){
   const {pathname}=useLocation();
@@ -47,6 +48,7 @@ export default function App(){
       <Route path="/epidemiologia" element={<InteligenciaEpidemiologica/>}/>
       <Route path="/saude-privada" element={<SaudePrivada/>}/>
       <Route path="/gestao-publica" element={<GestaoPublica/>}/>
+      <Route path="*" element={<NotFound/>}/>
     </Routes>
     <Footer/>
     <PrivacyConsent/>
