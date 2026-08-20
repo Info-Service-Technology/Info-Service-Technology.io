@@ -9,3 +9,5 @@ npm-debug.log*
 .vite/
 git-status-*.txt
 arquivos-indesejados.txt
+.vercel
+.env*
