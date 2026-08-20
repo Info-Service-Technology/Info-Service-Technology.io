@@ -10,7 +10,7 @@ const pages:Record<string,[string,string]>={
   '/governanca':['Governança e Compliance em Saúde | InfoService','Segurança, LGPD, auditoria e governança de acesso para informações de saúde.'],
   '/blog':['Blog de Inteligência de Dados em Saúde | InfoService','Conteúdo institucional sobre tecnologia, modelos preditivos e gestão da saúde.'],
   '/contato':['Contato e Apresentação Executiva | InfoService','Fale com a InfoService e solicite uma apresentação da plataforma HDI.'],
-  '/privacidade':['Privacidade e DPO | InfoService','Política de privacidade, cookies, direitos dos titulares e canal do encarregado de dados da InfoService.'],
+  '/privacidade':['Política de Privacidade e DPO | InfoService','Saiba como a InfoService trata dados pessoais, cookies, localização aproximada e solicitações à privacidade.'],
   '/gestao-publica':['Inteligência para Gestores Públicos | InfoService','Evidências e inteligência territorial para municípios, estados e secretarias de saúde.'],
   '/saude-privada':['Inteligência para Redes Hospitalares | InfoService','Eficiência operacional e melhores desfechos para redes hospitalares e saúde privada.'],
   '/epidemiologia':['Inteligência Epidemiológica | InfoService','Antecipação de riscos e fortalecimento da vigilância epidemiológica do território.'],
