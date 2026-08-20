@@ -3,6 +3,16 @@ export const phonePattern=/^[+()0-9\s.-]{10,25}$/;
 export const normalizePhone=(value:string)=>value.replace(/[^\d+]/g,'').replace(/(?!^)\+/g,'');
 export const contactEndpoint=(import.meta.env.VITE_CONTACT_API_URL as string|undefined)||'/api/contact';
 
+export function validateContact(body:FormData){
+  const nome=String(body.get('nome')??'').trim();
+  const email=String(body.get('email')??'').trim();
+  const telefone=normalizePhone(String(body.get('telefone')??''));
+  if(!namePattern.test(nome))return'Informe nome e sobrenome válidos.';
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email))return'Informe um e-mail válido.';
+  if(!/^\+?[0-9]{10,15}$/.test(telefone))return'Informe um WhatsApp válido com DDD.';
+  return'';
+}
+
 export function appendLocation(body:FormData,location:{latitude:number;longitude:number;accuracy:number}|null){
   if(!location)return;
   body.append('localizacao_aproximada',`${location.latitude}, ${location.longitude}`);
