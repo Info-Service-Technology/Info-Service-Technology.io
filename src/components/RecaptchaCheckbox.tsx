@@ -89,14 +89,17 @@ export default function RecaptchaCheckbox({resetKey=0}:{resetKey?:number}) {
           theme: 'light',
           size: 'normal',
           callback: (nextToken) => {
+            if (cancelled) return;
             setToken(nextToken);
             setState('verified');
           },
           'expired-callback': () => {
+            if (cancelled) return;
             setToken('');
             setState('loading');
           },
           'error-callback': () => {
+            if (cancelled) return;
             setToken('');
             setState('error');
           },
