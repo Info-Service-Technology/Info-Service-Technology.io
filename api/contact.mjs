@@ -19,11 +19,11 @@ export default async function handler(request,response){
   const verification=await verify.json();
   if(!verification.success)return response.status(400).json({success:false,message:'Confirme o reCAPTCHA e tente novamente.'});
   const assunto=clean(body.assunto)||'Novo contato pelo site InfoService';
-  const outgoing=new URLSearchParams();
+  const outgoing=new FormData();
   for(const[key,value]of Object.entries(body)){if(key!=='recaptchaToken'&&key!=='website')outgoing.set(key,clean(value,4000))}
   outgoing.set('nome',nome);outgoing.set('email',email);outgoing.set('telefone',telefone);outgoing.set('instituicao',instituicao);outgoing.set('mensagem',mensagem);
-  outgoing.set('_subject',`Contato pelo site: ${allowedSubjects.has(assunto)?assunto:'Outros assuntos'}`);outgoing.set('_template','table');outgoing.set('_captcha','false');
-  const sent=await fetch(`https://formsubmit.co/ajax/${EMAIL}`,{method:'POST',headers:{Accept:'application/json','Content-Type':'application/x-www-form-urlencoded'},body:outgoing});
+  outgoing.set('_subject',`Contato pelo site: ${allowedSubjects.has(assunto)?assunto:'Outros assuntos'}`);outgoing.set('_template','table');outgoing.set('_captcha','false');outgoing.set('_url','https://www.infoservicetechnology.com.br/contato');
+  const sent=await fetch(`https://formsubmit.co/ajax/${EMAIL}`,{method:'POST',headers:{Accept:'application/json',Origin:'https://www.infoservicetechnology.com.br',Referer:'https://www.infoservicetechnology.com.br/contato'},body:outgoing});
   const result=await sent.json().catch(()=>({}));
   if(!sent.ok||result.success===false||result.success==='false')return response.status(502).json({success:false,message:'Serviço de envio indisponível.'});
   response.setHeader('Cache-Control','no-store');return response.status(200).json({success:true});
