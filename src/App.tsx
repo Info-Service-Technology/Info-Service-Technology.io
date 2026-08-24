@@ -20,6 +20,7 @@ import InteligenciaEpidemiologica from './pages/InteligenciaEpidemiologica';
 import SaudePrivada from './pages/SaudePrivada';
 import GestaoPublica from './pages/GestaoPublica';
 import NotFound from './pages/NotFound';
+import ClusterHDI from './pages/ClusterHDI';
 
 function Scroll(){
   const {pathname}=useLocation();
@@ -36,6 +37,7 @@ export default function App(){
     <Routes>
       <Route path="/" element={<><Home/><HomeExtras/></>}/>
       <Route path="/ecossistema" element={<Ecossistema/>}/>
+      <Route path="/cluster-hdi" element={<ClusterHDI/>}/>
       <Route path="/solucoes" element={<Solucoes/>}/>
       <Route path="/tecnologia" element={<Tecnologia/>}/>
       <Route path="/governanca" element={<Governanca/>}/>

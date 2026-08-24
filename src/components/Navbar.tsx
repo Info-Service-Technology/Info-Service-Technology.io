@@ -26,12 +26,12 @@ const languageOptions: [Language, string][] = [
 
 export default function Navbar() {
   const [drawer, setDrawer] = useState(false);
+  const [ecosystemAnchor, setEcosystemAnchor] = useState<null | HTMLElement>(null);
   const [solutionsAnchor, setSolutionsAnchor] = useState<null | HTMLElement>(null);
   const [languageAnchor, setLanguageAnchor] = useState<null | HTMLElement>(null);
   const { language, setLanguage, t } = useLanguage();
 
   const links = [
-    [t('ecosystem'), '/ecossistema'],
     [t('technology'), '/tecnologia'],
     [t('governance'), '/governanca'],
     [t('blog'), '/blog'],
@@ -44,6 +44,11 @@ export default function Navbar() {
     [t('hospitals'), '/saude-privada'],
   ] as const;
 
+  const ecosystem = [
+    ['Visão do Ecossistema', '/ecossistema'],
+    ['Cluster HDI — Integração e Valor', '/cluster-hdi'],
+  ] as const;
+
   return (
     <AppBar position="sticky" elevation={0} sx={{ bgcolor: '#fff', color: '#111', borderBottom: '1px solid #eee' }}>
       <Container maxWidth={false} sx={{ px: { xs: 2, md: 5 } }}>
@@ -54,6 +59,9 @@ export default function Navbar() {
           </Box>
 
           <Stack direction="row" spacing={0.4} sx={{ display: { xs: 'none', lg: 'flex' }, mx: 'auto' }}>
+            <Button onClick={e => setEcosystemAnchor(e.currentTarget)} endIcon={<KeyboardArrowDown />} sx={{ color: '#111' }}>
+              {t('ecosystem')}
+            </Button>
             {links.map(([label, path]) => (
               <Button key={path} component={NavLink} to={path} sx={{ color: '#111', '&.active': { color: '#d81159' } }}>
                 {label}
@@ -95,6 +103,14 @@ export default function Navbar() {
         ))}
       </MuiMenu>
 
+      <MuiMenu anchorEl={ecosystemAnchor} open={Boolean(ecosystemAnchor)} onClose={() => setEcosystemAnchor(null)}>
+        {ecosystem.map(([label, path]) => (
+          <MenuItem key={path} component={Link} to={path} onClick={() => setEcosystemAnchor(null)}>
+            {label}
+          </MenuItem>
+        ))}
+      </MuiMenu>
+
       <MuiMenu anchorEl={languageAnchor} open={Boolean(languageAnchor)} onClose={() => setLanguageAnchor(null)}>
         {languageOptions.map(([value, label]) => (
           <MenuItem
@@ -119,6 +135,14 @@ export default function Navbar() {
           </Box>
 
           <Stack spacing={1} sx={{ mt: 1 }}>
+            <Box sx={{ borderBottom: '1px solid #eee', pb: 1 }}>
+              <Typography sx={{ fontSize: 12, color: '#666', px: 1, pb: 1 }}>{t('ecosystem')}</Typography>
+              {ecosystem.map(([label, path]) => (
+                <Button key={path} component={Link} to={path} onClick={() => setDrawer(false)} sx={{ justifyContent: 'flex-start', width: '100%' }}>
+                  {label}
+                </Button>
+              ))}
+            </Box>
             {links.map(([label, path]) => (
               <Button key={String(path)} component={Link} to={String(path)} onClick={() => setDrawer(false)} sx={{ justifyContent: 'flex-start' }}>
                 {label}
