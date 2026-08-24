@@ -6,6 +6,7 @@ const base='https://www.infoservicetechnology.com.br';
 const pages:Record<string,[string,string]>={
   '/':['InfoService | Inteligência de dados em saúde','Inteligência preditiva para gestão pública, redes hospitalares e vigilância epidemiológica.'],
   '/ecossistema':['Ecossistema HDI | InfoService','Arquitetura integrada e governada para toda a jornada da informação em saúde.'],
+  '/cluster-hdi':['Cluster HDI | Integração sem ruptura','Conheça como o HDI conecta sistemas existentes e apoia uma evolução gradual, governada e orientada pelas prioridades da instituição.'],
   '/tecnologia':['Tecnologia e Inteligência de Dados | InfoService','Tecnologia cloud-native, modelos preditivos e interoperabilidade para o setor da saúde.'],
   '/governanca':['Governança e Compliance em Saúde | InfoService','Segurança, LGPD, auditoria e governança de acesso para informações de saúde.'],
   '/blog':['Blog de Inteligência de Dados em Saúde | InfoService','Conteúdo institucional sobre tecnologia, modelos preditivos e gestão da saúde.'],
