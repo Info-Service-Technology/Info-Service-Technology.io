@@ -12,6 +12,7 @@ const pages:Record<string,[string,string]>={
   '/blog':['Blog de Inteligência de Dados em Saúde | InfoService','Conteúdo institucional sobre tecnologia, modelos preditivos e gestão da saúde.'],
   '/contato':['Contato e Apresentação Executiva | InfoService','Fale com a InfoService e solicite uma apresentação da plataforma HDI.'],
   '/privacidade':['Política de Privacidade e DPO | InfoService','Saiba como a InfoService trata dados pessoais, cookies, localização aproximada e solicitações à privacidade.'],
+  '/termos-de-uso':['Termos de Uso | InfoService','Conheça as condições para acesso e utilização do site institucional da InfoService Technology.'],
   '/gestao-publica':['Inteligência para Gestores Públicos | InfoService','Evidências e inteligência territorial para municípios, estados e secretarias de saúde.'],
   '/saude-privada':['Inteligência para Redes Hospitalares | InfoService','Eficiência operacional e melhores desfechos para redes hospitalares e saúde privada.'],
   '/epidemiologia':['Inteligência Epidemiológica | InfoService','Antecipação de riscos e fortalecimento da vigilância epidemiológica do território.'],
