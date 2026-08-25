@@ -1,1 +1,8 @@
-import {Box,Container,Typography} from '@mui/material';import HeroSection from '../components/sections/HeroSection';import BlogGrid from '../components/sections/BlogGrid';export default function Blog(){return <><HeroSection compact tag="IMPRENSA & BLOG" title="Conteúdo institucional, casos de sucesso e dados do território."/><Box sx={{py:{xs:9,md:13}}}><Container><Typography variant="h2" sx={{mb:6}}>Conhecimento que apoia decisões.</Typography><BlogGrid/></Container></Box></>}
+import {Box,Container,Typography} from '@mui/material';
+import HeroSection from '../components/sections/HeroSection';
+import BlogGrid from '../components/sections/BlogGrid';
+
+export default function Blog(){return <>
+  <HeroSection compact fullHeight image="/hero-blog.png" imagePosition="right top" tag="IMPRENSA & BLOG" title="Conteúdo institucional, casos de sucesso e dados do território."/>
+  <Box sx={{py:{xs:9,md:13}}}><Container><Typography variant="h2" sx={{mb:6}}>Conhecimento que apoia decisões.</Typography><BlogGrid/></Container></Box>
+</>}
