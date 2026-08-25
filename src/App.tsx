@@ -15,6 +15,7 @@ import Blog from './pages/Blog';
 import BlogArticle from './pages/BlogArticle';
 import Contato from './pages/Contato';
 import Privacidade from './pages/Privacidade';
+import TermosDeUso from './pages/TermosDeUso';
 import {modelos,parcerias,predicao} from './pages/blogArticles';
 import InteligenciaEpidemiologica from './pages/InteligenciaEpidemiologica';
 import SaudePrivada from './pages/SaudePrivada';
@@ -44,6 +45,7 @@ function AnimatedRoutes(){
       <Route path="/blog/parcerias-estrategicas" element={<BlogArticle article={parcerias}/>}/>
       <Route path="/contato" element={<Contato/>}/>
       <Route path="/privacidade" element={<Privacidade/>}/>
+      <Route path="/termos-de-uso" element={<TermosDeUso/>}/>
       <Route path="/epidemiologia" element={<InteligenciaEpidemiologica/>}/>
       <Route path="/saude-privada" element={<SaudePrivada/>}/>
       <Route path="/gestao-publica" element={<GestaoPublica/>}/>
