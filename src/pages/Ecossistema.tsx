@@ -14,7 +14,7 @@ const items=[
 
 export default function Ecossistema(){
   return <>
-    <HeroSection compact tag="O ECOSSISTEMA" title="Uma arquitetura única para toda a jornada do dado em saúde." body="Do sistema hospitalar mais crítico ao indicador socioeconômico municipal — o HDI harmoniza, governa e transforma informações em inteligência acionável para o território."/>
+    <HeroSection compact fullHeight tag="O ECOSSISTEMA" title="Uma arquitetura única para toda a jornada do dado em saúde." body="Do sistema hospitalar mais crítico ao indicador socioeconômico municipal — o HDI harmoniza, governa e transforma informações em inteligência acionável para o território."/>
     <Box sx={{py:{xs:9,md:13}}}><Container><TechnicalMatrix items={items}/></Container></Box>
     <ValueFlow/>
   </>;
