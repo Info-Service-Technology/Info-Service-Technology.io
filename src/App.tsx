@@ -28,13 +28,10 @@ function Scroll(){
   return null;
 }
 
-export default function App(){
-  return <BrowserRouter>
-    <Scroll/>
-    <SeoManager/>
-    <Navbar/>
-    <PageTranslator/>
-    <Routes>
+function AnimatedRoutes(){
+  const location=useLocation();
+  return <main key={location.pathname} className="page-transition">
+    <Routes location={location}>
       <Route path="/" element={<><Home/><HomeExtras/></>}/>
       <Route path="/ecossistema" element={<Ecossistema/>}/>
       <Route path="/cluster-hdi" element={<ClusterHDI/>}/>
@@ -52,6 +49,16 @@ export default function App(){
       <Route path="/gestao-publica" element={<GestaoPublica/>}/>
       <Route path="*" element={<NotFound/>}/>
     </Routes>
+  </main>;
+}
+
+export default function App(){
+  return <BrowserRouter>
+    <Scroll/>
+    <SeoManager/>
+    <Navbar/>
+    <PageTranslator/>
+    <AnimatedRoutes/>
     <Footer/>
     <PrivacyConsent/>
   </BrowserRouter>;

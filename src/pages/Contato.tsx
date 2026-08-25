@@ -42,20 +42,20 @@ export default function Contato(){
   };
 
   return <Box sx={{py:{xs:8,md:12},bgcolor:'#f8f9fa'}}><Container><Grid container spacing={7}>
-    <Grid item xs={12} md={5}><Typography variant="overline" color="#d81159" fontWeight={800}>CONTATO</Typography><Typography variant="h1" sx={{mt:2}}>Como podemos ajudar?</Typography><Typography color="text.secondary" mt={3} fontSize={17}>Escolha o assunto e envie sua mensagem. Nossa equipe responderá pelo e-mail informado.</Typography></Grid>
+    <Grid item xs={12} md={5}><Typography variant="overline" color="#d81159" fontWeight={800}>Contato</Typography><Typography variant="h1" sx={{mt:2}}>Como podemos ajudar?</Typography><Typography color="text.secondary" mt={3} fontSize={17}>Escolha o assunto e envie sua mensagem. Nossa equipe responderá pelo e-mail informado.</Typography></Grid>
     <Grid item xs={12} md={7}><Box component="form" onSubmit={submit} noValidate={false} sx={{bgcolor:'#fff',border:'1px solid #e0e0e0',p:{xs:3,md:5}}}>
       <input type="text" name="_honey" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{display:'none'}}/><input type="hidden" name="_captcha" value="true"/>
       <Grid container spacing={2}>
-        <Grid item xs={12}><TextField select required fullWidth name="assunto" label="Assunto do contato" value={selectedSubject} onChange={event=>setSelectedSubject(event.target.value)}>{subjects.map(subject=><MenuItem key={subject} value={subject}>{subject}</MenuItem>)}</TextField></Grid>
+        <Grid item xs={12}><TextField select required fullWidth name="assunto" label="Assunto do Contato" value={selectedSubject} onChange={event=>setSelectedSubject(event.target.value)}>{subjects.map(subject=><MenuItem key={subject} value={subject}>{subject}</MenuItem>)}</TextField></Grid>
         <Grid item xs={12} sm={6}><TextField required fullWidth name="nome" label="Nome completo" inputProps={{minLength:2,maxLength:80,pattern:"[A-Za-zÀ-ÖØ-öø-ÿ'’ -]+"}}/></Grid>
         <Grid item xs={12} sm={6}><TextField required fullWidth name="email" type="email" label="E-mail institucional" inputProps={{maxLength:160}}/></Grid>
         <Grid item xs={12} sm={6}><TextField required fullWidth name="instituicao" label="Empresa / Instituição"/></Grid>
         <Grid item xs={12} sm={6}><TextField required fullWidth name="telefone" type="tel" label="WhatsApp" inputMode="tel" inputProps={{pattern:whatsappPattern,maxLength:19}}/></Grid>
         <Grid item xs={12}><TextField required fullWidth name="mensagem" multiline rows={5} label="Mensagem"/></Grid>
-        <Grid item xs={12}><FormControlLabel control={<Checkbox required name="consentimento_privacidade" value="sim"/>} label={<Typography variant="body2">Li e concordo com a <a href="/privacidade">Política de Privacidade</a>.</Typography>}/><FormHelperText>O consentimento é necessário para que possamos responder ao seu contato.</FormHelperText></Grid>
+        <Grid item xs={12}><FormControlLabel control={<Checkbox required name="consentimento_privacidade" value="sim"/>} label={<Typography variant="body2">Li e concordo com a <a href="/privacidade">Política de Privacidade</a>.</Typography>}/><FormHelperText>O consentimento é necessário para que possamos responder ao seu Contato.</FormHelperText></Grid>
         <Grid item xs={12}>{showRecaptcha&&<RecaptchaCheckbox resetKey={recaptchaResetKey}/>}</Grid>
         <Grid item xs={12}><Button type="submit" disabled={status==='sending'} variant="contained" size="large" startIcon={status==='sending'?<CircularProgress size={18}/>:undefined}>{status==='sending'?'Enviando...':'Enviar mensagem'}</Button></Grid>
-        {status==='success'&&<Grid item xs={12}><Alert severity="success" onClose={()=>{setStatus('idle');setRecaptchaResetKey(value=>value+1);setShowRecaptcha(true);}}>Mensagem enviada com sucesso, em breve nossa equipe entrará em contato</Alert></Grid>}
+        {status==='success'&&<Grid item xs={12}><Alert severity="success" onClose={()=>{setStatus('idle');setRecaptchaResetKey(value=>value+1);setShowRecaptcha(true);}}>Mensagem enviada com sucesso, em breve nossa equipe entrará em Contato</Alert></Grid>}
         {status==='error'&&<Grid item xs={12}><Alert severity="error" onClose={()=>setStatus('idle')}>{errorMessage}</Alert></Grid>}
       </Grid>
     </Box></Grid>
