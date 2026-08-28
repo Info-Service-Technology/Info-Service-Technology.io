@@ -19,15 +19,13 @@ function InstitutionalFooter() {
             <Typography sx={{ fontSize: 12, color: '#38a3ff', mt: .25 }}>
               Inteligência de dados em saúde
             </Typography>
-            <Typography sx={{ color: '#aaa', fontSize: 13, lineHeight: 1.7, maxWidth: 430, mt: 2 }}>
-              Transformando dados em decisões de saúde.
-            </Typography>
+           
             
            
           </Grid>
 
           {/* COLUNA 2: REDES SOCIAIS */}
-          <Grid item xs={12} sm={6} md={3}>
+          <Grid item xs={12} sm={6} md={2}>
             <Typography fontWeight={800} mb={1.5}>Presença digital</Typography>
             <Stack direction="row" spacing={.5}>
               <ComingSoonIcon label="Instagram"><Instagram /></ComingSoonIcon>
@@ -37,7 +35,7 @@ function InstitutionalFooter() {
             </Stack>
             <Typography variant="caption" color="#8f8f8f">Canais oficiais em breve</Typography>
           </Grid>
-          <Grid item xs={12} sm={6} md={2}>
+          <Grid item xs={12} sm={6} md={3}>
              {/* ENDEREÇO INSERIDO AQUI */}
             <Typography sx={{ color: '#8f8f8f', fontSize: 13, lineHeight: 1.5, mt: 3 }}>
               Av. Getúlio Vargas, 335 — Quitandinha<br />
