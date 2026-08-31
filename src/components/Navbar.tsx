@@ -55,7 +55,7 @@ export default function Navbar() {
         <Toolbar disableGutters sx={{ height: 80 }}>
           <Box component={Link} to="/" sx={{ minWidth: { md: 285 }, flexGrow: { xs: 1, md: 0 } }}>
             <Typography sx={{ color: '#133c75', fontWeight: 800, fontSize: 20, lineHeight: 1 }}>InfoService</Typography>
-            <Typography sx={{ fontSize: 10, color: '#1688e4', mt: 0.5 }}>Inteligência de dados em saúde</Typography>
+            <Typography sx={{ fontSize: 10, color: '#1688e4', mt: 0.5 }}>HealthTech/Data & AI</Typography>
           </Box>
 
           <Stack direction="row" spacing={0.4} sx={{ display: { xs: 'none', lg: 'flex' }, mx: 'auto' }}>
