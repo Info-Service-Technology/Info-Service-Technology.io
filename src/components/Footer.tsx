@@ -17,7 +17,7 @@ function InstitutionalFooter() {
           <Grid item xs={12} md={3}>
             <Typography sx={{ fontWeight: 800, fontSize: 24 }}>InfoService</Typography>
             <Typography sx={{ fontSize: 12, color: '#38a3ff', mt: .25 }}>
-              Inteligência de dados em saúde
+              HealthTech/Data & AI
             </Typography>
            
             
