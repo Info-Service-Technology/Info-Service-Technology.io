@@ -38,8 +38,8 @@ function InstitutionalFooter() {
           <Grid item xs={12} sm={6} md={3}>
              {/* ENDEREÇO INSERIDO AQUI */}
             <Typography sx={{ color: '#8f8f8f', fontSize: 13, lineHeight: 1.5, mt: 3 }}>
-              Av. Getúlio Vargas, 335 — Quitandinha<br />
-              Petrópolis/RJ — CEP 25651-075
+              R. Teresa, 651 - 06 - Alto da Serra<br />
+              Petrópolis - RJ, 25625-027
             </Typography>
             </Grid>
           {/* COLUNA 3: APPLICATIVOS */}

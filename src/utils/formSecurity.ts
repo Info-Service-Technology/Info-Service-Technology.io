@@ -1,4 +1,4 @@
-export const formSubmitEndpoint = 'https://formsubmit.co/ajax/contato@infoservicetechnology.com.br';
+export const formSubmitEndpoint = 'https://formsubmit.co/ajax/mauroslucios@infoservicetechnology.com.br';
 const consentKey = 'infoservice-cookie-consent';
 const consentCookie = 'infoservice_cookie_consent';
 

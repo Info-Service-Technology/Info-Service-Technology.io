@@ -1,4 +1,4 @@
-const EMAIL='contato@infoservicetechnology.com.br';
+const EMAIL='mauroslucios@infoservicetechnology.com.br';
 const allowedSubjects=new Set(['Solicitar apresentação executiva','Falar com Relações Institucionais','Gestores Públicos','Inteligência Epidemiológica','Redes Hospitalares','Outros assuntos','Novo contato pelo site InfoService']);
 
 const clean=(value,max=200)=>String(value??'').replace(/[<>]/g,'').trim().slice(0,max);
